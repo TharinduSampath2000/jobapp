@@ -1,6 +1,6 @@
-package com.firstspring.jobapp.services;
+package com.firstspring.jobapp.company;
 
-import com.firstspring.jobapp.models.Company;
+import com.firstspring.jobapp.company.Company;
 
 import java.util.List;
 

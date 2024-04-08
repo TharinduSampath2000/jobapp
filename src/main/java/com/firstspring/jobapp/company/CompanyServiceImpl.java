@@ -1,8 +1,5 @@
-package com.firstspring.jobapp.impl;
+package com.firstspring.jobapp.company;
 
-import com.firstspring.jobapp.models.Company;
-import com.firstspring.jobapp.repositories.CompanyRepository;
-import com.firstspring.jobapp.services.CompanyService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,7 +7,7 @@ import java.util.Optional;
 
 @Service
 public class CompanyServiceImpl implements CompanyService {
-    private CompanyRepository companyRepository;
+    private final CompanyRepository companyRepository;
 
     public CompanyServiceImpl(CompanyRepository companyRepository) {
         this.companyRepository = companyRepository;

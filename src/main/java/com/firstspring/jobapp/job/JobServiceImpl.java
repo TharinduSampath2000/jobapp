@@ -1,8 +1,5 @@
-package com.firstspring.jobapp.impl;
+package com.firstspring.jobapp.job;
 
-import com.firstspring.jobapp.models.Job;
-import com.firstspring.jobapp.repositories.JobRepository;
-import com.firstspring.jobapp.services.JobService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,7 +8,7 @@ import java.util.Optional;
 @Service
 public class JobServiceImpl implements JobService {
     //private List<Job> jobs = new ArrayList<>();
-    private JobRepository jobRepository;
+    private final JobRepository jobRepository;
 
     public JobServiceImpl(JobRepository jobRepository) {
         this.jobRepository = jobRepository;

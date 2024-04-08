@@ -1,8 +1,7 @@
-package com.firstspring.jobapp.controllers;
+package com.firstspring.jobapp.company;
 
-import com.firstspring.jobapp.models.Company;
-import com.firstspring.jobapp.services.CompanyService;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/companies")
 public class CompanyController {
-    private CompanyService companyService;
+    private final CompanyService companyService;
 
     public CompanyController(CompanyService companyService) {
         this.companyService = companyService;
@@ -19,7 +18,7 @@ public class CompanyController {
 
     @GetMapping
     public ResponseEntity<List<Company>> getAllCompanies(){
-        return new ResponseEntity<>(companyService.getAllCompanies(),HttpStatus.OK);
+        return new ResponseEntity<>(companyService.getAllCompanies(), HttpStatus.OK);
     }
 
     @PostMapping

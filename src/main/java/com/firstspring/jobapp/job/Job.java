@@ -1,5 +1,6 @@
-package com.firstspring.jobapp.models;
+package com.firstspring.jobapp.job;
 
+import com.firstspring.jobapp.company.Company;
 import jakarta.persistence.*;
 
 @Entity
